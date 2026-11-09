@@ -32,11 +32,6 @@
 |---|---|---|
 | ai-organization | AI組織の企画管理本部（企画はIssueで管理） | [ai-organization](https://github.com/Charee-Villapong/ai-organization) |
 
-## 対象外
-
-- deadline-ledger：廃止済みのため対象外
-- 旧ML系（for_practice / forest-type-classification 等）：ツールカタログの対象外
-
 ## 運用ルール
 
 1. 新規ツール作成前に、このカタログをキーワード検索する
