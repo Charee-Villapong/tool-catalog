@@ -26,6 +26,7 @@
 | skills | AIエージェント向けカスタムスキル集（SKILL.mdの手順書集） | スキル, 手順書, SKILL.md | [skills](https://github.com/Charee-Villapong/skills) | 稼働中 |
 | entropy-reduction | 仕組みの総量（リポジトリ・cron・ルール・台帳行など）を計測し、重複・死蔵・符号化の候補を検出→判定→仕分け提示→削減実行までを疎結合なユニット群で担う。削減の担保は保存率テスト（意味の保存が絶対の制約、削減量は記録のみ） | エントロピー, 削減, 計測, 重複, 死蔵, 保存率, 埋め込み, PCA | [entropy-reduction](https://github.com/Charee-Villapong/entropy-reduction) | 開発中 |
 
+| ledger-morning-harness | タスク台帳の毎朝メンテナンス（新規収集→現況更新→確認・前進）を3エージェント直列で実行するワークフロー（ハーネス） | 台帳, ハーネス, ワークフロー, 直列 | [ledger-morning-harness](https://github.com/Charee-Villapong/ledger-morning-harness) | 稼働準備中 |
 ## 管理用
 
 | 名前 | 役割 | リポジトリ |
