@@ -9,6 +9,7 @@
 | ツール名 | 何ができる | 検索キーワード | リポジトリ | 状態 |
 |---|---|---|---|---|
 | sheet-writer | Google Sheetsへの書き込みで見切れ防止書式（列幅・折り返し・行高）を機械的に担保する書き込みtool＋違反検出の検査役 | シート, スプレッドシート, 書き込み, 書式, 見切れ | [sheet-writer](https://github.com/Charee-Villapong/sheet-writer) | 利用可 |
+| bookkeep | 応募候補リストの後処理（応募済み記録＋行グレー化／終了記録）を1コマンド化し読み戻し検証まで行う | 候補リスト, 応募, グレー, 後処理, シート | [job-candidate-list](https://github.com/Charee-Villapong/job-candidate-list) | 利用可 |
 | inventory-harness | 棚卸し・リファクタリング点検の管理（観点×対象マトリクス、未消化が残ると完了にできない） | 棚卸し, リファクタリング, 点検, マトリクス | [inventory-harness](https://github.com/Charee-Villapong/inventory-harness) | 利用可 |
 | mac-connection | Mac画面操作ツール集。中の gui_flow がLINE／DiscordのGUI送信（前面化→空確認→入力→読み戻し照合）を担う。ScreenCheck（窓キャプチャ）等の補助ツールも含む | Mac, GUI, 送信, LINE, Discord, 画面操作, スクリーンショット | [mac-connection](https://github.com/Charee-Villapong/mac-connection) | 利用可 |
 | win_ops | Macの窓・メニュー操作CLI（窓一覧・窓撮影・AXスナップショット取得と項目press・窓閉じ）。GUIエージェントキュー経由で実行し結果をJSONで返す。送信系の gui_flow とは分離（mac-connection内 tools/win_ops） | Mac, 窓, メニュー, AX, スクリーンショット, 画面操作 | [mac-connection](https://github.com/Charee-Villapong/mac-connection) | 利用可 |
