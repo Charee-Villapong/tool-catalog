@@ -26,9 +26,39 @@
 | kids-mac-notify | 子供のMacへ通知を送るエージェント（ダイアログ表示＋音声読み上げ） | 子供, Mac, 通知, リマインド | [kids-mac-notify](https://github.com/Charee-Villapong/kids-mac-notify) | 作成済み・未設置 |
 | skills | AIエージェント向けカスタムスキル集（SKILL.mdの手順書集） | スキル, 手順書, SKILL.md | [skills](https://github.com/Charee-Villapong/skills) | 稼働中 |
 | entropy-reduction | 仕組みの総量（リポジトリ・cron・ルール・台帳行など）を計測し、重複・死蔵・符号化の候補を検出→判定→仕分け提示→削減実行までを疎結合なユニット群で担う。削減の担保は保存率テスト（意味の保存が絶対の制約、削減量は記録のみ） | エントロピー, 削減, 計測, 重複, 死蔵, 保存率, 埋め込み, PCA | [entropy-reduction](https://github.com/Charee-Villapong/entropy-reduction) | 開発中 |
-| codify-taskforce | mdで運用されるルールのうちコード化できる部分を週次で抽出・判定し、開発Issueとして起票する（相反点検とわかりにくい記述の書き換え候補も対象）。判定はチェックリスト方式の2軸で、コード化可の候補は週上限の範囲で起票する | コード化, 抽出, 判定, 起票, 相反, 書き換え, 週次, ハーネス | [codify-taskforce](https://github.com/Charee-Villapong/codify-taskforce) | 稼働中（毎週火曜10:08） |
+| codify-taskforce | mdで運用されるルールのうちコード化できる部分を週次で抽出・判定し、開発Issueとして起票する（相反点検とわかりにくい記述の書き換え候補も対象）。判定はチェックリスト方式の2軸で、起票上限は撤廃済み（見つけた候補は全件起票） | コード化, 抽出, 判定, 起票, 相反, 書き換え, 週次, ハーネス | [codify-taskforce](https://github.com/Charee-Villapong/codify-taskforce) | 稼働中（毎週火曜10:08） |
 
 | ledger-morning-harness | タスク台帳の毎朝メンテナンス（新規収集→現況更新→確認・前進）を3エージェント直列で実行するワークフロー（ハーネス） | 台帳, ハーネス, ワークフロー, 直列 | [ledger-morning-harness](https://github.com/Charee-Villapong/ledger-morning-harness) | 稼働中 |
+
+## スキル内蔵ツール（タスクフォースのコード化で作成、2026-11-14）
+
+文章ルールをコード化して作った検査・担保ツール群。各スキルフォルダに同梱され、SKILL.md 側は要点と参照だけに痩せている。
+
+| ツール名 | 何ができる | 検索キーワード | リポジトリ | 状態 |
+|---|---|---|---|---|
+| reconcile.py | 一括整理の件数を実行ログから5区分（searched／already_done／newly_done／kept／restored）に数え直して照合する（bulk_cleanup_count_reconciliation） | 件数照合, 5区分, 実行ログ, 一括整理 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| verify_structure.py | シート構造変更の前後で集計位置・数式範囲・グラフ参照の変化を照合する（spreadsheet_edit_verification） | シート, 構造変更, 照合, 数式範囲, グラフ | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| login_attempts.py | ログイン試行の失敗回数を状態ファイルで数え、経路ごとの上限到達で別経路への切替・停止を判定する（browser_login_fallback） | ログイン, 試行回数, 状態, フォールバック | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| record_row.py | 思考記録（CBT）の保存行の書式（13列の揃い・気分値の範囲）を検証する（cbt_thought_record） | 思考記録, CBT, 行書式, 検証 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| carousel_check.py | カルーセルの枚数（6〜10枚）・文字数・役割の並びを検査する（ig-carousel） | カルーセル, 枚数, 文字数 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| comment_check.py | コメント文の文数（1〜3）・禁止パターン・絵文字条件を検査する（ig-comment） | コメント, 禁止パターン, 文数 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| follow_up_guard.py | DMフォローアップの回数を状態で数え、上限到達・期日前・禁止文を遮断する（ig-dm） | フォローアップ, 上限, DM | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| onscreen_check.py | リールの画面テキストの安全領域と語数を検査する（ig-reel） | リール, 安全領域, 語数 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| hook_gate.py | フック評価スコアが下限未満なら台本作成を止めるゲート（ig-reel） | フック, スコア, ゲート | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| story_check.py | ストーリーの枠数・安全領域・質問枠の配置を検査する（ig-story） | ストーリー, 安全領域, 質問配置 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| outlier_signal.py | 外れ値の倍率（中央値比）でシグナル判定する（ig-viral） | 外れ値, 倍率, シグナル | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| audit_metrics.py | 監査指標を計算し、標本不足のときは順位・傾向を出さない（ig-audit） | 監査, 指標, 順位付け | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| plan_check.py | 週間投稿計画の構成（曜日ごとの型の並び）を検査する（ig-plan） | 投稿計画, 構成検査 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| profile_check.py | プロフィール項目の文字数と個数を検査する（ig-profile） | プロフィール, 文字数, 個数 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| send_gate.py | 送信前に承認記録と体裁チェック2回分の完了を必須化するゲート（job_hunting_workflow） | 送信前, 承認, 体裁チェック, ゲート | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| width_check.py | 列幅の計算式と日付書式を検査する（spreadsheet_cutoff_prevention） | 列幅, 日付書式, シート | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| overlap_judgement.py | 文章の癖の重なりを既存チェック出力から判定する（natural-japanese-writing/scripts） | 癖, 重なり, 文章 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| slop_check.py | 記号と語彙の癖を機械検出する（stop-ai-slop-jp/scripts） | AIっぽさ, 記号, 語彙, 検出 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| extract_check.py | 抽出件数の合計から素材の薄さを判定する（ig-repurpose） | 抽出, 素材, 薄さ | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| failure_report.py | 失敗報告の型（タスク名＋再開条件の必須・期日表現の禁止）を検証し、台帳登録の有無を照合する（ai-organization/tools） | 失敗報告, 型検証, 台帳, 先送り防止 | ai-organization | 利用可 |
+| qa_loop_counter.py | QAループの停止条件（同一原因3回／前進なし2周）を数える（ai-organization/tools） | QA, ループ, 停止条件 | ai-organization | 利用可 |
+| cost_gate.py | 企画の費用を判定し、0円以外を却下・ストックへ回す費用ゲート（ai-organization/tools） | 費用, ゲート, 0円, 企画 | ai-organization | 利用可 |
+| comment_classifier.py | 本人の判断コメントを OK／NG／FB の符号に分類する（ai-organization/tools） | コメント, 符号分類, 判断 | ai-organization | 利用可 |
 ## 管理用
 
 | 名前 | 役割 | リポジトリ |
