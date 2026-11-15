@@ -55,6 +55,7 @@
 | overlap_judgement.py | 文章の癖の重なりを既存チェック出力から判定する（natural-japanese-writing/scripts） | 癖, 重なり, 文章 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | slop_check.py | 記号と語彙の癖を機械検出する（stop-ai-slop-jp/scripts） | AIっぽさ, 記号, 語彙, 検出 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | extract_check.py | 抽出件数の合計から素材の薄さを判定する（ig-repurpose） | 抽出, 素材, 薄さ | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| triage_check.py | コメント振り分け結果の形（1コメント1区分・提示件数と実数の一致・区分の固定順・SUPPORT返信8語以内・NOISE返信1行以内）を検査する（ig-reply） | 振り分け, 区分, 件数, 順序 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | failure_report.py | 失敗報告の型（タスク名＋再開条件の必須・期日表現の禁止）を検証し、台帳登録の有無を照合する（ai-organization/tools） | 失敗報告, 型検証, 台帳, 先送り防止 | ai-organization | 利用可 |
 | qa_loop_counter.py | QAループの停止条件（同一原因3回／前進なし2周）を数える（ai-organization/tools） | QA, ループ, 停止条件 | ai-organization | 利用可 |
 | cost_gate.py | 企画の費用を判定し、0円以外を却下・ストックへ回す費用ゲート（ai-organization/tools） | 費用, ゲート, 0円, 企画 | ai-organization | 利用可 |
