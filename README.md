@@ -52,6 +52,7 @@
 | profile_check.py | プロフィール項目の文字数と個数を検査する（ig-profile） | プロフィール, 文字数, 個数 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | send_gate.py | 送信前に承認記録と体裁チェック2回分の完了を必須化するゲート（job_hunting_workflow） | 送信前, 承認, 体裁チェック, ゲート | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | width_check.py | 列幅の計算式と日付書式を検査する（spreadsheet_cutoff_prevention） | 列幅, 日付書式, シート | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
+| deck_check.py | pptx全スライドのキッカー／タイトルを一覧し、タイトルなし・重複をflag表示。--diffで版同士の変更スライドを特定する（document_production_basics） | タイトル, スライド, pptx, 資料, 差分 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | overlap_judgement.py | 文章の癖の重なりを既存チェック出力から判定する（natural-japanese-writing/scripts） | 癖, 重なり, 文章 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | slop_check.py | 記号と語彙の癖を機械検出する（stop-ai-slop-jp/scripts） | AIっぽさ, 記号, 語彙, 検出 | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
 | extract_check.py | 抽出件数の合計から素材の薄さを判定する（ig-repurpose） | 抽出, 素材, 薄さ | [skills](https://github.com/Charee-Villapong/skills) | 利用可 |
