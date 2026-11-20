@@ -27,6 +27,7 @@
 | skills | AIエージェント向けカスタムスキル集（SKILL.mdの手順書集） | スキル, 手順書, SKILL.md | [skills](https://github.com/Charee-Villapong/skills) | 稼働中 |
 | entropy-reduction | 仕組みの総量（リポジトリ・cron・ルール・台帳行など）を計測し、重複・死蔵・符号化の候補を検出→判定→仕分け提示→削減実行までを疎結合なユニット群で担う。削減の担保は保存率テスト（意味の保存が絶対の制約、削減量は記録のみ） | エントロピー, 削減, 計測, 重複, 死蔵, 保存率, 埋め込み, PCA | [entropy-reduction](https://github.com/Charee-Villapong/entropy-reduction) | 開発中 |
 | codify-taskforce | mdで運用されるルールのうちコード化できる部分を週次で抽出・判定し、開発Issueとして起票する（相反点検とわかりにくい記述の書き換え候補も対象）。判定はチェックリスト方式の2軸で、起票上限は撤廃済み（見つけた候補は全件起票） | コード化, 抽出, 判定, 起票, 相反, 書き換え, 週次, ハーネス | [codify-taskforce](https://github.com/Charee-Villapong/codify-taskforce) | 稼働中（毎週火曜10:08） |
+| queue-driver | 本人確認待ちキューの定期提示ドライバー。未提示・前回提示から14日以上経過の pending 項目を古い順に最大3件まで選び、提示記録（提示回数・3回で hold）と本人の回答反映（承認／却下／再審査）を担う。codify-taskforce の queue-driver-select / queue-driver-presented / queue-driver-answer コマンド群 | キュー, 提示, 本人確認, ドライバー, 定期提示, hold, 週次 | [codify-taskforce](https://github.com/Charee-Villapong/codify-taskforce) | 利用可 |
 
 | ledger-morning-harness | タスク台帳の毎朝メンテナンス（新規収集→現況更新→確認・前進）を3エージェント直列で実行するワークフロー（ハーネス） | 台帳, ハーネス, ワークフロー, 直列 | [ledger-morning-harness](https://github.com/Charee-Villapong/ledger-morning-harness) | 稼働中 |
 
